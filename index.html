@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard: Book Reading Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap header-inner">
+      <h1>Book Reading Tracker</h1>
+      <a href="add-book.html" class="btn btn-primary">Add New Book</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="message" class="message" hidden></p>
+
+    <div class="toolbar">
+      <label for="filter">Filter</label>
+      <select id="filter">
+        <option value="all">All</option>
+        <option value="not-started">Not Started</option>
+        <option value="reading">Reading</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+    <section id="emptyState" class="empty" hidden>
+      <p>Your dashboard is empty. Add your first book to start tracking your reading.</p>
+      <a href="add-book.html" class="btn btn-primary">Add Book</a>
+    </section>
+
+    <section id="bookList" class="book-list"></section>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
