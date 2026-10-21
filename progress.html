@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress: Book Reading Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap header-inner">
+      <h1>Book Progress</h1>
+      <a href="index.html" class="btn">Back to Dashboard</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="message" class="message" hidden></p>
+
+    <section class="form-card summary">
+      <h2 id="bookTitle">Book</h2>
+      <p id="bookAuthor" class="book-meta"></p>
+      <div class="book-stats">
+        <span id="pagesStat"></span>
+        <span id="chaptersStat"></span>
+      </div>
+      <div id="progressBar"></div>
+    </section>
+
+    <h3 class="section-title">Update progress</h3>
+
+    <form id="progressForm" class="form-card" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="pages_read">Pages Read</label>
+          <input type="number" id="pages_read" name="pages_read" min="0" step="1">
+        </div>
+        <div class="field">
+          <label for="chapters_read">Chapters Read</label>
+          <input type="number" id="chapters_read" name="chapters_read" min="0" step="1">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="rating">Rating <span class="help">Optional, 1 to 5</span></label>
+        <select id="rating" name="rating">
+          <option value="">Not rated</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="note">Note <span class="help">Optional</span></label>
+        <textarea id="note" name="note"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Save Progress</button>
+      </div>
+    </form>
+
+    <h3 class="section-title">Reading history</h3>
+    <ul id="logList" class="log-list"></ul>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>
