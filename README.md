@@ -26,6 +26,3 @@ Two localStorage keys hold JSON arrays:
 - `readingLogs` each item has id, bookid, date, pages_added, notes
 
 To reset everything, open the browser console and run `localStorage.clear()`.
-
-## Built in sprints
-Each sprint is one commit, see `SPRINTS.md` for the plan.
